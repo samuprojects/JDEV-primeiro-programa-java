@@ -2,15 +2,21 @@ package cursojava.executavel;
 
 public class PrimeiraClasseJava {
 	
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		
-	/*O valor padrão é zero.*/
-	@SuppressWarnings("unused")
-	int numero;
+	int maiorIdade = 18;
 	
-	int numero2 = 0;
+	int idosoIdade = 60;
 	
-	System.out.println(numero2);
+	int jovemIdade = 16;
+	
+	int criancaIdade = 7;
+	
+	String cpf = "145.785.789-54";
+	
+	System.out.println("Maior idade é = " + maiorIdade);
+	System.out.println("Idoso idade é = " + idosoIdade);
 	
 		
 	}
