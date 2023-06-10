@@ -2,16 +2,14 @@ package cursojava.executavel;
 
 public class PrimeiraClasseJava {
 	
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 	
-	/*CHAR representa um caractere, utilizamos aspas simples*/
-	char pessoaFeminino = 'F';
-	
-	if(pessoaFeminino == 'F') {
-		System.out.println("Feminino");
-	} else {
-		System.out.println("Masculino");
-	}
+	/*String no Java é utilizado para textos de tamanho qualquer */
+	String nome;
+	String cpf;
+	String telefone;
+	String endereco;
 	
 	}
 }
