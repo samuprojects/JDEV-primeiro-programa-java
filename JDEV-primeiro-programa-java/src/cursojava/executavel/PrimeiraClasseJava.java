@@ -20,6 +20,11 @@ public class PrimeiraClasseJava {
 		} else {
 			System.out.println("Aluno reprovado: " + media);
 		}
+		
+		/*Operadores ternários são recomendados em micro validações*/
+		String saidaResultado = media >= 70 ? "Aluno Aprovado" : (media >= 40 && media <= 69) ? "Aluno em recuperação" : "Reprovado";
+		
+		System.out.println(saidaResultado);
 
 	}
 }
