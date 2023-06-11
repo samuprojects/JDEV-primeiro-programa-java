@@ -1,5 +1,6 @@
 package cursojava.classes;
 
+/* Esta classe (estrutura) representa um Aluno do mundo real que depois será um objeto na memória */
 public class Aluno {
 
 	String nome;
@@ -12,5 +13,18 @@ public class Aluno {
 	String dataMatricula;
 	String nomeEscola;
 	String serieMatriculado;
+	
+	public Aluno() { /* Criar o objeto na memória - Construtor Padrão do Java */
+				
+	}
+	
+	public Aluno (String nomePadrao) {/* Outro construtor - sobrecarga de construtor */
+		nome = nomePadrao;
+	}
+	
+	public Aluno (String nomePadrao, int idadePadrao) {
+		nome = nomePadrao;
+		idade = idadePadrao;
+	}
 
 }
