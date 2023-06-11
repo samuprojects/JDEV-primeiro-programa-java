@@ -16,6 +16,21 @@ public class PrimeiraClasseJava {
 		
 		double resto = carroNumero % pessoaNumero;
 		
-		JOptionPane.showMessageDialog(null, "Divisão para pessoas resultou em " + divisao + " carros e uma sobra de " + resto + " carro(s)");
+		/* Conforme documentação do Java o método de confirmação retorna tipo int sendo YES / OK = 0, NO = 1, CANCEL = 2, CLOSED = -1 */
+		int resposta = JOptionPane.showConfirmDialog(null, "Deseja ver o resultado da divisão?");
+		
+		if (resposta == 0) {
+			JOptionPane.showMessageDialog(null, "Divisão para pessoas resultou em " + divisao);
+		} else {
+			System.out.println("Não quis ver o resultado");
+		}
+		
+		resposta = JOptionPane.showConfirmDialog(null, "Deseja ver o RESTO da divisão?");
+		
+		if (resposta == 0) {
+			JOptionPane.showMessageDialog(null, "O resto da divisão é " + resto);
+		} else {
+			System.out.println("Não quis ver o resultado");
+		}
 	}
 }
