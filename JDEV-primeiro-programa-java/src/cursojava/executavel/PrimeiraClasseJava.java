@@ -4,26 +4,28 @@ public class PrimeiraClasseJava {
 
 	public static void main(String[] args) {
 
-		/* Estrutura de repetição FOR com Break (Parada) */
+		/* Estrutura de repetição FOR e Continue */
 
+		System.out.println("Contando de 0 a 10...");
 		for (int numero = 0; numero <= 10; numero++) {
-			System.out.println(numero);
-			if (numero == 3) {
-				System.out.println("Obaaa, encontrei o numero " + numero);
-				System.out.println("Estou parando de executar...");
-				break;
-			}			
+			if (numero == 3 || numero == 6 || numero == 9) {
+				System.out.println("Obaaa, encontrei o número " + numero);
+				continue;
+			}
+
+			System.out.println("Processando o laço de repetição...");
 		}
 
 		System.out.println("-----------------------------");
 
+		System.out.println("Contando de 10 a 0...");
 		for (int numero = 10; numero >= 0; numero--) {
-			System.out.println(numero);
-			if (numero == 3) {
-				System.out.println("Obaaa, encontrei o numero " + numero);
-				System.out.println("Estou parando de executar...");
-				break;
-			}	
+			if (numero == 3 || numero == 6 || numero == 9) {
+				System.out.println("Obaaa, encontrei o número " + numero);
+				continue;
+			}
+
+			System.out.println("Processando o laço de repetição");
 		}
 	}
 }
