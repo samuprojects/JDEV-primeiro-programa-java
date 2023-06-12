@@ -135,17 +135,34 @@ public class Aluno {
 		this.nota3 = nota3;
 	}
 
-	public double getNota4() { /* get usa return para devolver o valor */
+	public double getNota4() {
 		return nota4;
 	}
 
-	public void setNota4(double nota4) { /* set usa void pois não devolve nenhum valor */
+	public void setNota4(double nota4) {
 		this.nota4 = nota4;
 	}
 
-	/* Método que retorna a média do aluno */
 	public double getMediaNota() {
 		return (nota1 + nota2 + nota3 + nota4) / 4;
+	}
+	
+	public boolean getAlunoAprovado() {
+		double media = this.getMediaNota(); /* aproveitamos o this para reutilizar o código do método acima*/
+		if (media >= 70) { /* além disso vai aplicar sua própria regra de negócio */
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	public String getAlunoAprovado2() {
+		double media = this.getMediaNota();
+		if (media >= 70) {
+			return "Aluno está aprovado"; /* pouco utilizado este tipo de retorno*/
+		} else {
+			return "Aluno está reprovado"; /* usado para fins didáticos, pois o ideal é deixar genérico e automatizado*/
+		}
 	}
 
 }
