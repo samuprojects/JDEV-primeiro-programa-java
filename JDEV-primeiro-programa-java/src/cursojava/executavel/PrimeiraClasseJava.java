@@ -1,15 +1,14 @@
 package cursojava.executavel;
 
-import javax.swing.JOptionPane;
+//import javax.swing.JOptionPane;
 
 import cursojava.classes.Aluno;
 
 public class PrimeiraClasseJava {
 
-	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		
-		String nome = JOptionPane.showInputDialog("Qual o nome do aluno?");
+		/*String nome = JOptionPane.showInputDialog("Qual o nome do aluno?");
 		String idade = JOptionPane.showInputDialog("Qual a idade?");
 		String dataNascimento = JOptionPane.showInputDialog("Data de nascimento?");
 		String rg = JOptionPane.showInputDialog("Registro Geral?");
@@ -41,9 +40,27 @@ public class PrimeiraClasseJava {
 		aluno1.setNota3(Double.parseDouble(note3));
 		aluno1.setNota4(Double.parseDouble(note4));
 
-		System.out.println(aluno1); // só o nome do objeto é a mesma coisa que utilizar (aluno.toString()) que apresenta a descrição do objeto na memória
+		System.out.println(aluno1);
 		System.out.println("Média do aluno = " + aluno1.getMediaNota());
-		System.out.println("Resultado = " + aluno1.getAlunoAprovado2());
+		System.out.println("Resultado = " + aluno1.getAlunoAprovado2());*/
+		
+		
+		
+		/* Equals e HashCode tem objetivo de diferenciar objetos*/
+		
+		Aluno aluno1 = new Aluno();
+		aluno1.setNome("Alex"); // Somente com nome os objetos seriam iguais porém com a inclusão do CPF são diferentes
+		aluno1.setNumeroCpf("123");
+		
+		Aluno aluno2 = new Aluno();
+		aluno2.setNome("Alex");
+		aluno2.setNumeroCpf("1234");
+		
+		if (aluno1.equals(aluno2)) {
+			System.out.println("Alunos são iguais");
+		} else {
+			System.out.println("Alunos não são iguais");
+		}
 		
 	}
 }

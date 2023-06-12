@@ -1,5 +1,7 @@
 package cursojava.classes;
 
+import java.util.Objects;
+
 public class Aluno {
 
 	private String nome;
@@ -165,7 +167,6 @@ public class Aluno {
 		}
 	}
 
-	// usamos o toString para não utilizar a declaração de acesso a cada atributo (para exibir o valor individualmente como no exercício anterior)
 	@Override
 	public String toString() {
 		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
@@ -174,6 +175,23 @@ public class Aluno {
 				+ serieMatriculado + ", nota1=" + nota1 + ", nota2=" + nota2 + ", nota3=" + nota3 + ", nota4=" + nota4
 				+ "]";
 	}
-	
 
+	@Override
+	public int hashCode() {
+		return Objects.hash(nome, numeroCpf);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Aluno other = (Aluno) obj;
+		return Objects.equals(nome, other.nome) && Objects.equals(numeroCpf, other.numeroCpf);
+	}
+
+	
 }
