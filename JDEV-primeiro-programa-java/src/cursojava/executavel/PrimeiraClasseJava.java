@@ -14,7 +14,8 @@ public class PrimeiraClasseJava {
 		aluno1.setDataNascimento("18/10/1987");
 		aluno1.setRegistroGeral("44554.4544.545");
 		aluno1.setNumeroCpf("54544.545454.5454");
-		aluno1.setNomeMae("Shirlei");
+		//aluno1 = null; // essa linha descomentada causará um NullPointerException na linha 18 porque o objeto se tornou nulo.
+		aluno1.setNomeMae("Shirlei"); // para solucionar basta corrigir o que está nulo
 		aluno1.setNomePai("Antonio");
 		aluno1.setDataMatricula("10/01/2019");
 		aluno1.setSerieMatriculado("5");

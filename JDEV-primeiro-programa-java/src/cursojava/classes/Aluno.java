@@ -148,8 +148,8 @@ public class Aluno {
 	}
 	
 	public boolean getAlunoAprovado() {
-		double media = this.getMediaNota(); /* aproveitamos o this para reutilizar o código do método acima*/
-		if (media >= 70) { /* além disso vai aplicar sua própria regra de negócio */
+		double media = this.getMediaNota();
+		if (media >= 70) {
 			return true;
 		} else {
 			return false;
@@ -159,9 +159,9 @@ public class Aluno {
 	public String getAlunoAprovado2() {
 		double media = this.getMediaNota();
 		if (media >= 70) {
-			return "Aluno está aprovado"; /* pouco utilizado este tipo de retorno*/
+			return "Aluno está aprovado";
 		} else {
-			return "Aluno está reprovado"; /* usado para fins didáticos, pois o ideal é deixar genérico e automatizado*/
+			return "Aluno está reprovado"; 
 		}
 	}
 
