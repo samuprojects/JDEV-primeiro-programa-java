@@ -1,13 +1,13 @@
 package cursojava.classes;
 
-/* Esta classe (estrutura) representa um Aluno do mundo real que depois será um objeto na memória */
-public class Aluno {
+public class Aluno { /* A classe com visibilidade public pôde ser criada na Primeira ClasseJava */
 
-	/* Esses são os atributos do Aluno */
-	String nome;
-	int idade;
-	String dataNascimento;
-	String registroGeral;
+	/* para acessar podemos alterar para public apenas de forma didática como a seguir */
+	public String nome;
+	public int idade;
+	String dataNascimento; /* porém os demais atributos não podem ser acessados por que estão private */
+	@SuppressWarnings("unused")
+	private String registroGeral; /* a variável acima por padrão já é private e podem ser declarados explicitamente como aqui */
 	String numeroCpf;
 	String nomeMae;
 	String nomePai;
