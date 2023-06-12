@@ -41,13 +41,9 @@ public class PrimeiraClasseJava {
 		aluno1.setNota3(Double.parseDouble(note3));
 		aluno1.setNota4(Double.parseDouble(note4));
 
-		System.out.println("Nome é = " + aluno1.getNome());
-		System.out.println("Idade é = " + aluno1.getIdade());
-		System.out.println("Nome mãe = " + aluno1.getNomeMae());
-		System.out.println("Nascimento = " + aluno1.getDataNascimento());
-		System.out.println("Média da nota é = " + aluno1.getMediaNota());
-		System.out.println("Resultado = " + (aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"));
-		System.out.println("Resultado 2 = " + aluno1.getAlunoAprovado2());
-
+		System.out.println(aluno1); // só o nome do objeto é a mesma coisa que utilizar (aluno.toString()) que apresenta a descrição do objeto na memória
+		System.out.println("Média do aluno = " + aluno1.getMediaNota());
+		System.out.println("Resultado = " + aluno1.getAlunoAprovado2());
+		
 	}
 }
