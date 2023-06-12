@@ -3,6 +3,7 @@ package cursojava.classes;
 /* Esta classe (estrutura) representa um Aluno do mundo real que depois será um objeto na memória */
 public class Aluno {
 
+	/* Esses são os atributos do Aluno */
 	String nome;
 	int idade;
 	String dataNascimento;
