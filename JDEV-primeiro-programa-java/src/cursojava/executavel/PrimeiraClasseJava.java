@@ -49,9 +49,18 @@ public class PrimeiraClasseJava {
 		
 		int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina?");
 		
-		if (escolha == 0) {
-			String disciplinaRemover = JOptionPane.showInputDialog("Qual a disciplina: 1, 2, 3, ou 4 ?");
-			aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue()-1);
+		if (escolha == 0) { /* Opção SIM é Zero */
+			
+			int continuarRemover = 0;
+			int posicao = 1; // variável de controle para indicar que está retirando 1 da posição do índice do array que começa em Zero.
+			
+			while (continuarRemover == 0) {
+				String disciplinaRemover = JOptionPane.showInputDialog("Qual a disciplina: 1, 2, 3, ou 4 ?");
+				aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() - posicao);
+				posicao++; // ++ soma +1 
+				continuarRemover = JOptionPane.showConfirmDialog(null, "Continuar a remover?");
+			}
+			
 		}
 		
 		System.out.println(aluno1);
