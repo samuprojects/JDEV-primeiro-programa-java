@@ -17,7 +17,7 @@ public class Aluno {
 	private String nomeEscola;
 	private String serieMatriculado;
 
-	private List<Disciplina> disciplinas = new ArrayList<Disciplina>(); /* Alterado para lista de disciplinas */
+	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
 
 	public List<Disciplina> getDisciplinas() {
 		return disciplinas;
@@ -121,7 +121,11 @@ public class Aluno {
 	}
 
 	public double getMediaNota() {
-		return 0;
+		double somaNotas = 0.0;
+		for (Disciplina disciplina : disciplinas) {
+			somaNotas += disciplina.getNota();
+		}
+		return somaNotas / disciplinas.size(); /* Com size() fica dinamico recebendo quantas disciplinas forem criadas */
 	}
 
 	public boolean getAlunoAprovado() {

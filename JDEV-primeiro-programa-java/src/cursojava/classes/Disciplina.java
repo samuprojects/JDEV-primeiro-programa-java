@@ -2,7 +2,6 @@ package cursojava.classes;
 
 import java.util.Objects;
 
-/* Com essas mudanças a classe Disciplina servirá para todos os objetos instanciados de notas e matérias */
 public class Disciplina {
 
 	private double nota;
