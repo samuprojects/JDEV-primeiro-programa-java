@@ -14,7 +14,7 @@ public class PrimeiraClasseJava {
 
 		List<Aluno> alunos = new ArrayList<Aluno>();
 
-		for (int qtd = 1; qtd <= 2; qtd++) { // para pedir ao usuário o numero 1 graficamente, o índice sempre começa em zero.
+		for (int qtd = 1; qtd <= 2; qtd++) {
 
 			String nome = JOptionPane.showInputDialog("Qual o nome do aluno " + qtd + " ?");
 			/*
@@ -74,10 +74,13 @@ public class PrimeiraClasseJava {
 
 		for (Aluno aluno : alunos) {
 
-			System.out.println(aluno);
-			System.out.println("Média do aluno = " + aluno.getMediaNota());
-			System.out.println("Resultado = " + aluno.getAlunoAprovado2());
-			System.out.println("------------------------------------------------------------");
+			if (aluno.getNome().equalsIgnoreCase("alex")) { /* Vai executar abaixo somente quando o nome for alex */
+				System.out.println(aluno);
+				System.out.println("Média do aluno = " + aluno.getMediaNota());
+				System.out.println("Resultado = " + aluno.getAlunoAprovado2());
+				System.out.println("------------------------------------------------------------");
+				break;
+			}
 
 		}
 	}
