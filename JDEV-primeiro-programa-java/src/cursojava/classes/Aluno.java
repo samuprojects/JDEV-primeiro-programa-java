@@ -125,7 +125,7 @@ public class Aluno {
 		for (Disciplina disciplina : disciplinas) {
 			somaNotas += disciplina.getNota();
 		}
-		return somaNotas / disciplinas.size(); /* Com size() fica dinamico recebendo quantas disciplinas forem criadas */
+		return somaNotas / disciplinas.size();
 	}
 
 	public boolean getAlunoAprovado() {
