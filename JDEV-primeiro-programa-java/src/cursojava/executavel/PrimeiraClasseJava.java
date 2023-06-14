@@ -86,8 +86,8 @@ public class PrimeiraClasseJava {
 				
 				trocar.getDisciplinas().add(disciplina);
 				
-				alunos.set(pos, trocar); /* efetuou a troca */
-				aluno = alunos.get(pos); /* atualizou a lista para impressão correta com novos dados */
+				alunos.set(pos, trocar);
+				aluno = alunos.get(pos);
 			}
 			
 			System.out.println("Aluno = " + aluno.getNome());
