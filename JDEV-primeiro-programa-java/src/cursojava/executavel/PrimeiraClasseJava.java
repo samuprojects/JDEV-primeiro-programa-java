@@ -13,10 +13,15 @@ import cursojava.constantes.StatusAluno;
 public class PrimeiraClasseJava {
 
 	public static void main(String[] args) {
-
+		
+		String login = JOptionPane.showInputDialog("Informe o login");
+		String senha = JOptionPane.showInputDialog("Informe a senha");
+		
+		if(login.equalsIgnoreCase("admin") && senha.equalsIgnoreCase("admin")) {
+		
+		
 		List<Aluno> alunos = new ArrayList<Aluno>();
 		
-		/* é uma lista que dentro dela temos uma chave que identifica uma sequencia de valores */
 		HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
 
 		for (int qtd = 1; qtd <= 5; qtd++) {
@@ -82,7 +87,7 @@ public class PrimeiraClasseJava {
 		maps.put(StatusAluno.RECUPERACAO, new ArrayList<Aluno>());
 
 
-		for (Aluno aluno : alunos) { /* Separação em listas a seguir */
+		for (Aluno aluno : alunos) { 
 
 			if (aluno.getAlunoAprovado2().equalsIgnoreCase(StatusAluno.APROVADO)) {
 				maps.get(StatusAluno.APROVADO).add(aluno);
@@ -109,5 +114,6 @@ public class PrimeiraClasseJava {
 		for (Aluno aluno : maps.get(StatusAluno.RECUPERACAO)) {
 			System.out.println("Resultado = " + aluno.getAlunoAprovado2() + " com média de = " + aluno.getMediaNota());
 		}
+	}
 	}
 }
