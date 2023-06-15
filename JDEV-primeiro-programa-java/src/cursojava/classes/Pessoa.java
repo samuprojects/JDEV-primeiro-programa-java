@@ -54,6 +54,9 @@ public class Pessoa {
 		this.nomePai = nomePai;
 	}
 	
-	
+	/* Retorna True caso seja 18 anos para cima senão False */
+	public boolean pessoaMaiorIdade() {
+		return idade >= 18;
+	}
 
 }
