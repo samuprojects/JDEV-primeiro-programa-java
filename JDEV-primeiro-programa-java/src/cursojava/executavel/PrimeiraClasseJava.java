@@ -14,16 +14,16 @@ import cursojava.constantes.StatusAluno;
 
 public class PrimeiraClasseJava {
 
-	@SuppressWarnings("null")
 	public static void main(String[] args) {
+		
+		try {
 		
 		String login = JOptionPane.showInputDialog("Informe o login");
 		String senha = JOptionPane.showInputDialog("Informe a senha");
 								
 		if(new FuncaoAutenticacao(new Diretor(login, senha)).autenticar()) { /* Restrição do "contrato" apenas para quem está legitimamente autorizado */
 		
-		List<Aluno> alunos = null; // esse null causaŕá erro na linha 84 quando tentar adicionar o aluno
-		//List<Aluno> alunos = new ArrayList<Aluno>(); /* apagar a linha acima e descomentar o comando dessa linha corrige a falha */
+		List<Aluno> alunos = new ArrayList<Aluno>();
 		
 		HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
 
@@ -120,5 +120,9 @@ public class PrimeiraClasseJava {
 	} else {
 		JOptionPane.showMessageDialog(null, "Acesso não permitido");
 	}
+		} catch (Exception e) {
+			e.printStackTrace(); /* Imprimir erro no console Java para orientação ao programador */
+			JOptionPane.showMessageDialog(null, "Erro ao processar notas"); /* Apresentar uma mensagem mais amigável para o usuário */
+		}
 	}
 }
