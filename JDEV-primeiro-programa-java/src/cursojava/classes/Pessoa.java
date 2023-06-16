@@ -1,7 +1,7 @@
 package cursojava.classes;
 
-/* Herança -> Classe pai / ou classe master / ou superclasse - Contém atributos comuns a todos os objetos filho */
-public class Pessoa {
+/* Tornando a classe Pessoa abstrata para que não haja instanciação de Pessoa */
+public abstract class Pessoa {
 	
 	protected String nome;
 	protected int idade;
@@ -54,7 +54,6 @@ public class Pessoa {
 		this.nomePai = nomePai;
 	}
 	
-	/* Retorna True caso seja 18 anos para cima senão False */
 	public boolean pessoaMaiorIdade() {
 		return idade >= 18;
 	}

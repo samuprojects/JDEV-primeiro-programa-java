@@ -171,7 +171,7 @@ public class Aluno extends Pessoa {
 		return Objects.equals(nome, other.nome) && Objects.equals(numeroCpf, other.numeroCpf);
 	}
 	
-	@Override /* A anotação Override identifica métodos sobrescritos */
+	@Override 
 	public boolean pessoaMaiorIdade() {
 		return idade >= 21;
 	}

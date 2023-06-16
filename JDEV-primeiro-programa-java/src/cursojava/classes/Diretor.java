@@ -1,6 +1,5 @@
 package cursojava.classes;
 
-/* Classe filha de Pessoa que estende de Pessoa */
 public class Diretor extends Pessoa {
 	
 	private String registroEducacao;
@@ -35,8 +34,4 @@ public class Diretor extends Pessoa {
 				+ ", nomePai=" + nomePai + "]";
 	}
 	
-	
-	
-	
-
 }

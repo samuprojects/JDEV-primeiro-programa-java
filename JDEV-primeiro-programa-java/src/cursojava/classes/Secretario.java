@@ -33,9 +33,4 @@ public class Secretario extends Pessoa {
 				+ registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai + "]";
 	}
 	
-	
-	
-	
-	
-
 }
