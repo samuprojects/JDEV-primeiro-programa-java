@@ -1,7 +1,9 @@
 package cursojava.interfaces;
 
-/* Essa interface será o nosso contrato de autenticação */
 public interface PermitirAcesso {
 	
-	public boolean autenticar(String login, String senha); /* alterado método para deixar mais restritivo */
+	/* Outra forma de implementar o controle de acesso agora usando construtores */
+	public boolean autenticar(String login, String senha); 
+	public boolean autenticar(); 
+
 }

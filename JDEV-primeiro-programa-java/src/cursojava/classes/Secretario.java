@@ -7,6 +7,21 @@ public class Secretario extends Pessoa implements PermitirAcesso {
 	private String registro;
 	private String nivelCargo;
 	private String experiencia;
+	
+	/* se avaliado pela equipe técnica a necessidade de ter esses atributos então seguir com a criação */
+	private String login;
+	private String senha;
+	
+	/* Como já havia código com o construtor padrão manter os dois para evitar quebra sistema */
+	public Secretario(String login, String senha) {
+		this.login = login;
+		this.senha = senha;
+	}
+	
+	/* Mantendo o construtor padrão */
+	public Secretario() {
+		
+	}
 		
 	public String getRegistro() {
 		return registro;
@@ -39,12 +54,16 @@ public class Secretario extends Pessoa implements PermitirAcesso {
 		return 1800.80 * 0.9;
 	}
 	
-	/* Com a implementação do controle de acesso por parâmetro houve ganho com a redução de atributos... */
-	/* ... na Classe secretário, reduzindo o código, mantendo a consistência, pois em sistemas ... */
-	/* ... mais complexos (Hibernate) poderia haver uma quebra da estrutura dessa classe ... */
-	/* ... por causa da criação de atributos no banco sem necessidade e jogamos a responsabilidade para interface*/
+	/* Apesar de não estar em utilização é mantido para não quebrar o sistema */
 	@Override
 	public boolean autenticar(String login, String senha) {
+		this.login = login;
+		this.senha = senha;
+		return autenticar();
+	}
+	
+	@Override
+	public boolean autenticar() {
 		return login.equals("admin") && senha.equals("admin");
 	}	
 			
