@@ -17,13 +17,8 @@ public class PrimeiraClasseJava {
 		
 		String login = JOptionPane.showInputDialog("Informe o login");
 		String senha = JOptionPane.showInputDialog("Informe a senha");
-		
-		Secretario secretario = new Secretario(); /* Acesso do "contrato" da interface diretamente com o objeto */
-		
-		secretario.setLogin(login);
-		secretario.setSenha(senha);
-		
-		if(secretario.autenticar()) { /* se TRUE acessa, se FALSE não acessa */
+					
+		if(new Secretario().autenticar(login, senha)) { /* utilizando o novo método de autenticar mais enxuto*/
 		
 		
 		List<Aluno> alunos = new ArrayList<Aluno>();
