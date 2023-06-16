@@ -14,6 +14,7 @@ import cursojava.constantes.StatusAluno;
 
 public class PrimeiraClasseJava {
 
+	@SuppressWarnings("null")
 	public static void main(String[] args) {
 		
 		String login = JOptionPane.showInputDialog("Informe o login");
@@ -21,11 +22,12 @@ public class PrimeiraClasseJava {
 								
 		if(new FuncaoAutenticacao(new Diretor(login, senha)).autenticar()) { /* Restrição do "contrato" apenas para quem está legitimamente autorizado */
 		
-		List<Aluno> alunos = new ArrayList<Aluno>();
+		List<Aluno> alunos = null; // esse null causaŕá erro na linha 84 quando tentar adicionar o aluno
+		//List<Aluno> alunos = new ArrayList<Aluno>(); /* apagar a linha acima e descomentar o comando dessa linha corrige a falha */
 		
 		HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
 
-		for (int qtd = 1; qtd <= 5; qtd++) {
+		for (int qtd = 1; qtd <= 1; qtd++) {
 
 			String nome = JOptionPane.showInputDialog("Qual o nome do aluno " + qtd + " ?");
 			/*
