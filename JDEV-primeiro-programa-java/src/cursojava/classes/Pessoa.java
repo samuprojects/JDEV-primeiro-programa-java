@@ -1,6 +1,5 @@
 package cursojava.classes;
 
-/* Tornando a classe Pessoa abstrata para que não haja instanciação de Pessoa */
 public abstract class Pessoa {
 	
 	protected String nome;
@@ -11,7 +10,6 @@ public abstract class Pessoa {
 	protected String nomeMae;
 	protected String nomePai;
 	
-	/* Incluir um método abstrato na classe pai torna obrigatório a implementação nas classes filhas */
 	public abstract double salario();
 	
 	public String getNome() {
