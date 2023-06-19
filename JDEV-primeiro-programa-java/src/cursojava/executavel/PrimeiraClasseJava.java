@@ -78,7 +78,7 @@ public class PrimeiraClasseJava {
 						int continuarRemover = 0;
 						int posicao = 1;
 
-						while (continuarRemover == 0) {
+						while (continuarRemover == 0) { // após debug remoção pode ser melhorado
 							String disciplinaRemover = JOptionPane
 									.showInputDialog("Qual a disciplina: 1, 2, 3, ou 4 ?");
 							aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() - posicao);
