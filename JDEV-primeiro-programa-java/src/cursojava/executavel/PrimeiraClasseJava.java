@@ -155,6 +155,8 @@ public class PrimeiraClasseJava {
 		} catch (Exception e) { // capturando qualquer outro tipo de erro genérico
 			e.printStackTrace();
 			JOptionPane.showMessageDialog(null, "Erro inesperado: " + e.getClass().getName());
+		} finally { // É executado todas as vezes mesmo que não haja erro
+			JOptionPane.showMessageDialog(null, "Obrigado por aprender Java comigo");
 		}
 	}
 }
