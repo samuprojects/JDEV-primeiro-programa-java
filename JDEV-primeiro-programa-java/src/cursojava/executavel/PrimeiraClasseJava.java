@@ -92,7 +92,7 @@ public class PrimeiraClasseJava {
 					alunos.add(aluno1);
 				}
 
-				maps.put(StatusAluno.APROVADO, null); // causará erro
+				maps.put(StatusAluno.APROVADO, new ArrayList<Aluno>()); 
 				maps.put(StatusAluno.REPROVADO, new ArrayList<Aluno>());
 				maps.put(StatusAluno.RECUPERACAO, new ArrayList<Aluno>());
 
@@ -159,5 +159,6 @@ public class PrimeiraClasseJava {
 		File file = new File("file.txt");
 		Scanner scanner = new Scanner(file);
 
-	}
-}
+	} // Comandos Debug - F6 -> Segue linha a linha | F5-> Entrada em métodos
+} // F7 - Saída do método atual | F8 Segue para o próximo ponto de parada
+// CRTL + SHIFT + I - Valor da expressão ou variável.
