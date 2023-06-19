@@ -1,8 +1,10 @@
 package cursojava.executavel;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
@@ -14,9 +16,13 @@ import cursojava.constantes.StatusAluno;
 
 public class PrimeiraClasseJava {
 
+	@SuppressWarnings({ "unused", "resource" })
 	public static void main(String[] args) {
 
 		try {
+			
+			File file = new File ("lines.txt");
+			Scanner scanner = new Scanner(file); // o arquivo não foi criado e dará erro
 
 			String login = JOptionPane.showInputDialog("Informe o login");
 			String senha = JOptionPane.showInputDialog("Informe a senha");
@@ -148,6 +154,7 @@ public class PrimeiraClasseJava {
 			JOptionPane.showInternalMessageDialog(null, "Opaa um null pointer exception: " + e.getClass());
 		} catch (Exception e) { // capturando qualquer outro tipo de erro genérico
 			e.printStackTrace();
+			JOptionPane.showMessageDialog(null, "Erro inesperado: " + e.getClass().getName());
 		}
 	}
 }
