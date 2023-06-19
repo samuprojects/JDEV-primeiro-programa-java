@@ -9,7 +9,6 @@ import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
-import curso.java.excecao.ExcecaoProcessarNota;
 import cursojava.classes.Aluno;
 import cursojava.classes.Diretor;
 import cursojava.classes.Disciplina;
@@ -22,7 +21,7 @@ public class PrimeiraClasseJava {
 
 		try {
 			lerArquivo();
-					
+
 			String login = JOptionPane.showInputDialog("Informe o login");
 			String senha = JOptionPane.showInputDialog("Informe a senha");
 
@@ -130,7 +129,7 @@ public class PrimeiraClasseJava {
 			} else {
 				JOptionPane.showMessageDialog(null, "Acesso não permitido");
 			}
-		} catch (NumberFormatException e) {
+		} catch (Exception e) {
 
 			StringBuilder saida = new StringBuilder();
 
@@ -149,23 +148,16 @@ public class PrimeiraClasseJava {
 
 			JOptionPane.showMessageDialog(null, "Erro de conversão de número " + saida.toString());
 
-		} catch (NullPointerException e) { 
-			JOptionPane.showInternalMessageDialog(null, "Opaa um null pointer exception: " + e.getClass());
-		} catch (ExcecaoProcessarNota e) {
-			e.printStackTrace();
-			JOptionPane.showMessageDialog(null, "Erro inesperado: " + e.getClass().getName());
 		} finally {
 			JOptionPane.showMessageDialog(null, "Obrigado por aprender Java comigo");
 		}
 	}
-	
+
 	@SuppressWarnings({ "unused", "resource" })
-	public static void lerArquivo () throws ExcecaoProcessarNota {
-		try {
-			File file = new File ("file.txt");
-			Scanner scanner = new Scanner(file);
-		} catch (FileNotFoundException e) {
-			throw new ExcecaoProcessarNota(e.getMessage());			
-		}
+	public static void lerArquivo() throws FileNotFoundException {
+
+		File file = new File("file.txt");
+		Scanner scanner = new Scanner(file);
+
 	}
 }
