@@ -20,7 +20,7 @@ public class PrimeiraClasseJava {
 	public static void main(String[] args) {
 
 		try {
-			lerArquivo();
+			//lerArquivo();
 
 			String login = JOptionPane.showInputDialog("Informe o login");
 			String senha = JOptionPane.showInputDialog("Informe a senha");
@@ -92,7 +92,7 @@ public class PrimeiraClasseJava {
 					alunos.add(aluno1);
 				}
 
-				maps.put(StatusAluno.APROVADO, new ArrayList<Aluno>());
+				maps.put(StatusAluno.APROVADO, null); // causará erro
 				maps.put(StatusAluno.REPROVADO, new ArrayList<Aluno>());
 				maps.put(StatusAluno.RECUPERACAO, new ArrayList<Aluno>());
 
