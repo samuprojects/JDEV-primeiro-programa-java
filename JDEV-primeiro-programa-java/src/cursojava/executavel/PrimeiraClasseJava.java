@@ -30,28 +30,30 @@ public class PrimeiraClasseJava {
 				for (int qtd = 1; qtd <= 1; qtd++) {
 
 					String nome = JOptionPane.showInputDialog("Qual o nome do aluno " + qtd + " ?");
-					/*
-					 * String idade = JOptionPane.showInputDialog("Qual a idade?"); String
-					 * dataNascimento = JOptionPane.showInputDialog("Data de nascimento?"); String
-					 * rg = JOptionPane.showInputDialog("Registro Geral?"); String cpf =
-					 * JOptionPane.showInputDialog("Qual é o CPF?"); String mae =
-					 * JOptionPane.showInputDialog("Nome da mãe?"); String pai =
-					 * JOptionPane.showInputDialog("Nome do pai?"); String matricula =
-					 * JOptionPane.showInputDialog("Data da matrícula?"); String serie =
-					 * JOptionPane.showInputDialog("Qual a série?"); String escola =
-					 * JOptionPane.showInputDialog("Nome da escola?");
-					 */
+					String idade = JOptionPane.showInputDialog("Qual a idade?");
+
+					// String dataNascimento = JOptionPane.showInputDialog("Data de nascimento?");
+					// String rg = JOptionPane.showInputDialog("Registro Geral?");
+					// String cpf = JOptionPane.showInputDialog("Qual é o CPF?");
+					// String mae = JOptionPane.showInputDialog("Nome da mãe?");
+					// String pai = JOptionPane.showInputDialog("Nome do pai?");
+					// String matricula = JOptionPane.showInputDialog("Data da matrícula?");
+					// String serie = JOptionPane.showInputDialog("Qual a série?");
+					// String escola = JOptionPane.showInputDialog("Nome da escola?");
 
 					Aluno aluno1 = new Aluno();
 
 					aluno1.setNome(nome);
-					/*
-					 * aluno1.setIdade(Integer.valueOf(idade));
-					 * aluno1.setDataNascimento(dataNascimento); aluno1.setRegistroGeral(rg);
-					 * aluno1.setNumeroCpf(cpf); aluno1.setNomeMae(mae); aluno1.setNomePai(pai);
-					 * aluno1.setDataMatricula(matricula); aluno1.setSerieMatriculado(serie);
-					 * aluno1.setNomeEscola(escola);
-					 */
+					aluno1.setIdade(Integer.valueOf(idade));
+
+					// aluno1.setDataNascimento(dataNascimento);
+					// aluno1.setRegistroGeral(rg);
+					// aluno1.setNumeroCpf(cpf);
+					// aluno1.setNomeMae(mae);
+					// aluno1.setNomePai(pai);
+					// aluno1.setDataMatricula(matricula);
+					// aluno1.setSerieMatriculado(serie);
+					// aluno1.setNomeEscola(escola);
 
 					for (int pos = 1; pos <= 1; pos++) {
 						String nomeDisciplina = JOptionPane.showInputDialog("Nome da disciplina " + pos + " ?");
@@ -123,14 +125,12 @@ public class PrimeiraClasseJava {
 			} else {
 				JOptionPane.showMessageDialog(null, "Acesso não permitido");
 			}
-		} catch (Exception e) {
+		} catch (NumberFormatException e) { // capturando erro de número
 
 			StringBuilder saida = new StringBuilder();
 
-			/* Imprimir erro no console Java para orientação ao programador */
 			e.printStackTrace();
 
-			/* Mensagem do erro ou causa */
 			System.out.println("Mensagem: " + e.getMessage());
 
 			for (int pos = 0; pos < e.getStackTrace().length; pos++) {
@@ -142,8 +142,12 @@ public class PrimeiraClasseJava {
 
 			}
 
-			JOptionPane.showMessageDialog(null, "Erro ao processar notas " + saida.toString());
+			JOptionPane.showMessageDialog(null, "Erro de conversão de número " + saida.toString());
 
+		} catch (NullPointerException e) { // capturando erro null
+			JOptionPane.showInternalMessageDialog(null, "Opaa um null pointer exception: " + e.getClass());
+		} catch (Exception e) { // capturando qualquer outro tipo de erro genérico
+			e.printStackTrace();
 		}
 	}
 }
