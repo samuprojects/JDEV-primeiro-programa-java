@@ -15,6 +15,7 @@ import cursojava.classes.Disciplina;
 import cursojava.classesauxiliares.FuncaoAutenticacao;
 import cursojava.constantes.StatusAluno;
 
+@SuppressWarnings("unused")
 public class PrimeiraClasseJava {
 
 	public static void main(String[] args) {
@@ -63,11 +64,11 @@ public class PrimeiraClasseJava {
 						String nomeDisciplina = JOptionPane.showInputDialog("Nome da disciplina " + pos + " ?");
 						String notaDisciplina = JOptionPane.showInputDialog("Nota da disciplina " + pos + " ?");
 
-						Disciplina disciplina = new Disciplina();
-						disciplina.setDisciplina(nomeDisciplina);
-						disciplina.setNota(Double.valueOf(notaDisciplina));
+//						Disciplina disciplina = new Disciplina();
+//						disciplina.setDisciplina(nomeDisciplina);
+//						disciplina.setNota(Double.valueOf(notaDisciplina));
 
-						aluno1.getDisciplinas().add(disciplina);
+						//aluno1.getDisciplinas().add(disciplina);
 
 					}
 
