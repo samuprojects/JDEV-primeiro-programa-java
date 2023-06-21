@@ -1,25 +1,13 @@
 package cursojava.executavel;
 
-import javax.swing.JOptionPane;
-
 public class ArrayVetor {
-	
-	public static void main(String[] args) {
-		
-		String posicoes = JOptionPane.showInputDialog("Quantas posições o Array deve ter?");
-		
-		double[] notas = new double[Integer.parseInt(posicoes)];
-		
-		for (int pos = 0; pos < notas.length; pos++) {
-			String valor = JOptionPane.showInputDialog("Qual o valor da posição " + pos + " do Array?");
-			notas[pos] = Double.valueOf(valor);
-		}
-		
-		for (int pos = 0; pos < notas.length; pos++) {
-			System.out.println("Nota " + (pos + 1) + " é = " + notas[pos]);
-		}
 
-		
+	@SuppressWarnings("unused")
+	public static void main(String[] args) {
+
+		int[] inteiros = new int[10];
+		float[] floats = new float[10];
+
 	}
 
 }
