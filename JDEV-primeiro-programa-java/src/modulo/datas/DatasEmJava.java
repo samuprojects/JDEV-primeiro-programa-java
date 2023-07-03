@@ -2,75 +2,37 @@ package modulo.datas;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 
 public class DatasEmJava {
 
-	@SuppressWarnings("deprecation")
 	public static void main(String[] args) throws ParseException {
 		
-		Calendar calendar = Calendar.getInstance();
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
 		
-		Date date = new Date();
+		Date dataVencimentoBoleto = simpleDateFormat.parse("10/04/2021");
 		
-		System.out.println("Data em milisegundos: " + date.getTime());
-		System.out.println("Calendar em milisegundos: " + calendar.getTimeInMillis());
+		Date dataAtual = simpleDateFormat.parse("07/04/2021");
 		
-		System.out.println("Dia do mes: " + date.getDate());
+		// Se a data 1 é maior que a data 2
+		if (dataVencimentoBoleto.after(dataAtual)) { // Posterior ou maior, ou depois da data atual
+			System.out.println("Boleto não vencido");
+			} else {
+				System.out.println("Boleto vencido - URGENTE");
+			}
 		
-		System.out.println("Calendar do mes: " + calendar.get(Calendar.DAY_OF_MONTH));
-
+		SimpleDateFormat simpleDateFormat2 = new SimpleDateFormat("dd/MM/yyyy");
 		
-		System.out.println("Dia da semana: " + date.getDay());
+		Date dataVencimentoBoleto2 = simpleDateFormat2.parse("01/04/2021");
 		
-		System.out.println("Calendar da semana: " + (calendar.get(Calendar.DAY_OF_WEEK) - 1));
+		Date dataAtual2 = simpleDateFormat2.parse("11/04/2021");
 		
-		
-		System.out.println("Hora do dia: " + date.getHours());
-		
-		System.out.println("Calendar Hora do dia: " + calendar.get(Calendar.HOUR_OF_DAY));
-		
-		
-		System.out.println("Minuto da hora: " + date.getMinutes());
-		
-		System.out.println("Calendar Minuto da hora: " + calendar.get(Calendar.MINUTE));
-
-		
-		System.out.println("Segundos " + date.getSeconds());
-		
-		System.out.println("Calendar Segundos " + calendar.get(Calendar.SECOND));
-
-		
-		System.out.println("Ano " + (date.getYear() + 1900));
-		
-		System.out.println("Calendar Ano " + calendar.get(Calendar.YEAR));
-
-		
-		// --------------Simple Date Format---------------------
-		
-		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm.ss");
-		
-		System.out.println("Data atual em formato padrao e String: " + simpleDateFormat.format(date));
-		
-		System.out.println("Calendar Data atual em formato padrao e String: " + simpleDateFormat.format(calendar.getTime()));
-
-		
-		
-		simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm.ss");
-		
-		System.out.println("Data em formato para banco de dados: " + simpleDateFormat.format(date));
-		
-		System.out.println("Data em formato para banco de dados: " + simpleDateFormat.format(calendar.getTime()));
-		
-		
-		simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
-		System.out.println("Objeto Date: " + simpleDateFormat.parse("1987-10-18"));
-		
-		simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
-		System.out.println("Objeto Date: " + simpleDateFormat.parse("18/10/1987"));
-		
-		
+		// Se a data 1 é menor que a data 2
+		if (dataVencimentoBoleto2.before(dataAtual2)) {
+			System.out.println("Boleto vencido - URGENTE");
+			} else {
+				System.out.println("Boleto não vencido");
+			}
 
 	}
 
