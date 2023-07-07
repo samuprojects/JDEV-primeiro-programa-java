@@ -1,5 +1,5 @@
-Alex egidio;pessoa1@gmail.com;50
-Samu test;pessoa2@gmail.com;25
-Maria Jesus;pessoa3@gmail.com;40
+Alex egidio|pessoa1@gmail.com|50
+Samu test|pessoa2@gmail.com|25
+Maria Jesus|pessoa3@gmail.com|40
 
-Jose jesus;pessoa4@gmail.com;13
+Jose jesus|pessoa4@gmail.com|13
