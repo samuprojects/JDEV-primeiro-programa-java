@@ -35,7 +35,7 @@ public class Arquivos {
 
 		
 		
-		File arquivo = new File("arquivo.txt");
+		File arquivo = new File("arquivo.csv");
 		
 		if (!arquivo.exists()) {
 			arquivo.createNewFile();
